@@ -1,0 +1,40 @@
+<ion-view view-title="Autocomplete and Distance">
+  <ion-content class="padding">
+  <!-- <input type="text" disable-tap style="width:100%; border:1px solid #cfcfcf; padding-left:10px;" tommy-address-autocomplete ng-model="result1" options="options" details="details1"/>
+  <input type="text" disable-tap style="width:100%; border:1px solid #cfcfcf; padding-left:10px;" tommy-address-autocomplete ng-model="result2" options="options" details="details2"/> -->
+	<div class="list card">
+	  <div class="item item-divider">location A</div>
+	  <div class="item item-body">
+		<div>
+		  <input type="text" disable-tap style="width:100%; border:1px solid #cfcfcf; padding-left:10px;" tommy-address-autocomplete ng-model="result1" options="options" details="details1"/>
+		  <!-- {{result1}} -->
+		  <!-- {{details1}} -->
+		</div>
+	  </div>
+	</div>
+	<div class="list card">
+	  <div class="item item-divider">location B</div>
+	  <div class="item item-body">
+		<div>
+		  
+		  <input type="text" disable-tap style="width:100%; border:1px solid #cfcfcf; padding-left:10px;" tommy-address-autocomplete ng-model="result2" options="options" details="details2"/>
+		  <!-- {{result2}} -->
+		  
+		</div>
+	  </div>
+	</div>
+	<button ng-click="Calulate(result1, result2)" class="button button-assertive">
+  		Calculate
+	</button>
+	<div ng-show="distance.length > 0">{{distance}} - {{duration}}</div>
+	<button ng-click="Routes(details1, details2)" class="button button-positive">
+  		Routes
+	</button>
+	<button ng-click="getContact()" class="button button-positive">
+  		Get Contact
+	</button>
+	<button ng-click="sendMail()" class="button button-positive">
+  		Send Mail
+	</button>
+  </ion-content>
+</ion-view>
